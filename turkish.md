@@ -12,17 +12,17 @@ Alexey Mezenin tarafından derlenen Laravel ile çalışmanın en iyi yolların�
 
 [Tek Sorumluluk Prensibi](#tek-sorumluluk-prensibi)
 
-[Şişman model, Zayıf kontrol sınıfları](#Şişman model, Zayıf kontrol sınıfları)
+[Şişman model, Zayıf kontrol sınıfları](#Şişman-model-Zayıf-kontrol-sınıfları)
 
 [Validasyon](#validasyon)
 
-[İşletme mantığı servis sınıflarında olmalı](#İşletme mantığı servis sınıflarında olmalı)
+[İşletme mantığı servis sınıflarında olmalı](#İşletme-mantığı-servis-sınıflarında-olmalı)
 
-[Kendinizi tekrar etmeyin - Don't repeat yourself](#Kendinizi tekrar etmeyin - Don't repeat yourself)
+[Kendinizi tekrar etmeyin - Don't repeat yourself](#Kendinizi-tekrar-etmeyin-Dont-repeat-yourself)
 
-[SQL query'leri yerine Eloquent, Array yerine Collection sınıflarını kullanın](#SQL query'leri yerine Eloquent, Array yerine Collection sınıflarını kullanın)
+[SQL query'leri yerine Eloquent, Array yerine Collection sınıflarını kullanın](#SQL-queryleri-yerine-Eloquent-Array-yerine-Collection-sınıflarını-kullanın)
 
-[Toplu atamalar - Mass assignment](#Toplu atamalar - Mass assignment)
+[Toplu atamalar - Mass assignment](#Toplu-atamalar-Mass-assignment)
 
 [Blade şablonlarında query kullanmayın. İlişkileri önceden yükleyin. (N + 1 problem)](#do-not-execute-queries-in-blade-templates-and-use-eager-loading-n--1-problem)
 
