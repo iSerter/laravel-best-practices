@@ -12,17 +12,17 @@ Alexey Mezenin tarafından derlenen Laravel ile çalışmanın en iyi yolların�
 
 [Tek Sorumluluk Prensibi](#tek-sorumluluk-prensibi)
 
-[Şişman model, Zayıf kontrol sınıfları](#sisman-model-zayif-kontrol-siniflari)
+[Şişman model, Zayıf kontrol sınıfları](#%C5%9Ei%C5%9Fman-model-zay%C4%B1f-kontrol-s%C4%B1n%C4%B1flar%C4%B1)
 
-[Validasyon](#validation)
+[Validasyon](#validasyon)
 
-[İşletme mantığı servis sınıflarında olmalı](#business-logic-should-be-in-service-class)
+[İşletme mantığı servis sınıflarında olmalı](#İşletme mantığı servis sınıflarında olmalı)
 
-[Kendinizi tekrar etmeyin (DRY prensibi)](#dont-repeat-yourself-dry)
+[Kendinizi tekrar etmeyin - Don't repeat yourself](#Kendinizi tekrar etmeyin - Don't repeat yourself)
 
-[SQL query'leri yerine Eloquent kullanın. Array'ler yerineyse Collection sınıfını](#prefer-to-use-eloquent-over-using-query-builder-and-raw-sql-queries-prefer-collections-over-arrays)
+[SQL query'leri yerine Eloquent, Array yerine Collection sınıflarını kullanın](#SQL query'leri yerine Eloquent, Array yerine Collection sınıflarını kullanın)
 
-[Toplu atamalar (mass assignment)](#mass-assignment)
+[Toplu atamalar - Mass assignment](#Toplu atamalar - Mass assignment)
 
 [Blade şablonlarında query kullanmayın. İlişkileri önceden yükleyin. (N + 1 problem)](#do-not-execute-queries-in-blade-templates-and-use-eager-loading-n--1-problem)
 
@@ -173,7 +173,7 @@ class PostRequest extends Request
 
 [🔝 Back to contents](#contents)
 
-### **Business logic should be in service class**
+### **İşletme mantığı servis sınıflarında olmalı**
 
 A controller must have only one responsibility, so move business logic from controllers to service classes.
 
@@ -213,11 +213,11 @@ class ArticleService
 
 [🔝 Back to contents](#contents)
 
-### **Don't repeat yourself (DRY)**
+### **Kendinizi tekrar etmeyin - Don't repeat yourself**
 
 Reuse code when you can. SRP is helping you to avoid duplication. Also, reuse Blade templates, use Eloquent scopes etc.
 
-Bad:
+Kötü:
 
 ```php
 public function getActive()
@@ -233,7 +233,7 @@ public function getArticles()
 }
 ```
 
-Good:
+İyi:
 
 ```php
 public function scopeActive($q)
@@ -256,11 +256,11 @@ public function getArticles()
 
 [🔝 Back to contents](#contents)
 
-### **Prefer to use Eloquent over using Query Builder and raw SQL queries. Prefer collections over arrays**
+### **SQL query'leri yerine Eloquent, Array yerine Collection sınıflarını kullanın**
 
 Eloquent allows you to write readable and maintainable code. Also, Eloquent has great built-in tools like soft deletes, events, scopes etc.
 
-Bad:
+Kötü:
 
 ```sql
 SELECT *
@@ -285,9 +285,9 @@ Article::has('user.profile')->verified()->latest()->get();
 
 [🔝 Back to contents](#contents)
 
-### **Mass assignment**
+### **Toplu atamalar - Mass assignment**
 
-Bad:
+Kötü:
 
 ```php
 $article = new Article;
@@ -333,20 +333,20 @@ $users = User::with('profile')->get();
 
 ### **Comment your code, but prefer descriptive method and variable names over comments**
 
-Bad:
+Kötü:
 
 ```php
 if (count((array) $builder->getQuery()->joins) > 0)
 ```
 
-Better:
+Daha iyi:
 
 ```php
 // Determine if there are any joins.
 if (count((array) $builder->getQuery()->joins) > 0)
 ```
 
-Good:
+Çok daha iyi:
 
 ```php
 if ($this->hasJoins())
@@ -356,7 +356,7 @@ if ($this->hasJoins())
 
 ### **Do not put JS and CSS in Blade templates and do not put any HTML in PHP classes**
 
-Bad:
+Kötü:
 
 ```php
 let article = `{{ json_encode($article) }}`;
@@ -384,7 +384,7 @@ The best way is to use specialized PHP to JS package to transfer the data.
 
 ### **Use config and language files, constants instead of text in the code**
 
-Bad:
+Kötü:
 
 ```php
 public function isNormal()
