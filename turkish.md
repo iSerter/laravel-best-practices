@@ -12,7 +12,7 @@ Alexey Mezenin tarafından derlenen Laravel ile çalışmanın en iyi yolların�
 
 [Tek Sorumluluk Prensibi](#tek-sorumluluk-prensibi)
 
-[Şişman model, Zayıf kontrol sınıfları](#%C5%9Ei%C5%9Fman-model-zay%C4%B1f-kontrol-s%C4%B1n%C4%B1flar%C4%B1)
+[Şişman model, Zayıf kontrol sınıfları](#Şişman model, Zayıf kontrol sınıfları)
 
 [Validasyon](#validasyon)
 
