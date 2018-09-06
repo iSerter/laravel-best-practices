@@ -1,8 +1,9 @@
 ![Laravel best practices](/images/logo-english.png?raw=true)
 
-Translations:
+Çeviriler:
 
 [Русский](russian.md)
+
 [Türkçe](turkish.md)
 
 Alexey Mezenin tarafından derlenen Laravel ile çalışmanın en iyi yollarının türkçe tercümesi. 
@@ -11,7 +12,7 @@ Alexey Mezenin tarafından derlenen Laravel ile çalışmanın en iyi yolların�
 
 [Tek Sorumluluk Prensibi](#tek-sorumluluk-prensibi)
 
-[Şişman model, Zayıf kontrol sınıfları](#fat-models-skinny-controllers)
+[Şişman model, Zayıf kontrol sınıfları](#sisman-model-zayif-kontrol-siniflari)
 
 [Validasyon](#validation)
 
@@ -86,13 +87,13 @@ public function getFullNameShort()
 }
 ```
 
-[🔝 Back to contents](#contents)
+[🔝 İçerik İndisi](#icerikler)
 
-### **Fat models, skinny controllers**
+### **Şişman model, Zayıf kontrol sınıfları**
 
-Put all DB related logic into Eloquent models or into Repository classes if you're using Query Builder or raw SQL queries.
+Tüm veritabanı işlemleri model yada repository sınıflarına koyulmalı. 
 
-Bad:
+Kötü:
 
 ```php
 public function index()
@@ -107,7 +108,7 @@ public function index()
 }
 ```
 
-Good:
+İyi:
 
 ```php
 public function index()
@@ -130,11 +131,11 @@ class Client extends Model
 
 [🔝 Back to contents](#contents)
 
-### **Validation**
+### **Validasyon**
 
-Move validation from controllers to Request classes.
+Validasyon mantığı Controller yerine Request sınıflarına yerleştirilmeli.
 
-Bad:
+Kötü:
 
 ```php
 public function store(Request $request)
@@ -149,7 +150,7 @@ public function store(Request $request)
 }
 ```
 
-Good:
+İyi:
 
 ```php
 public function store(PostRequest $request)
