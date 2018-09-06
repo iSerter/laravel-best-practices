@@ -1,18 +1,20 @@
 ![Laravel best practices](/images/logo-english.png?raw=true)
 
-Çeviriler:
+
+
+Alexey Mezenin tarafından derlenen Laravel ile çalışmanın en iyi yollarının türkçe tercümesi. 
+
+### Çeviriler:
 
 [Русский](russian.md)
 
 [Türkçe](turkish.md)
 
-Alexey Mezenin tarafından derlenen Laravel ile çalışmanın en iyi yollarının türkçe tercümesi. 
-
 ## İçerikler
 
 [Tek Sorumluluk Prensibi](#tek-sorumluluk-prensibi)
 
-[Şişman model, Zayıf kontrol sınıfları](#Şişman-model-Zayıf-kontrol-sınıfları)
+[Şişman model, Zayıf kontrol sınıfları](#Şişman-model-zayıf-kontrol-sınıfları)
 
 [Validasyon](#validasyon)
 
@@ -20,11 +22,11 @@ Alexey Mezenin tarafından derlenen Laravel ile çalışmanın en iyi yolların�
 
 [Kendinizi tekrar etmeyin - Don't repeat yourself](#Kendinizi-tekrar-etmeyin-Dont-repeat-yourself)
 
-[SQL query'leri yerine Eloquent, Array yerine Collection sınıflarını kullanın](#SQL-queryleri-yerine-Eloquent-Array-yerine-Collection-sınıflarını-kullanın)
+[SQL query'leri yerine Eloquent, Array yerine Collection sınıflarını kullanın](#SQL-queryleri-yerine-eloquent-array-yerine-collection-sınıflarını-kullanın)
 
-[Toplu atamalar - Mass assignment](#Toplu-atamalar-Mass-assignment)
+[Toplu atamalar - Mass assignment](#Toplu-atamalar-mass-assignment)
 
-[Blade şablonlarında query kullanmayın. İlişkileri önceden yükleyin. (N + 1 problem)](#do-not-execute-queries-in-blade-templates-and-use-eager-loading-n--1-problem)
+[Blade şablonlarında query kullanmayın. İlişkileri önceden yükleyin. (N + 1 problem)](#Blade-şablonlarında-query-kullanmayın-ilişkileri-önceden-yükleyin-n--1-problem)
 
 [Kodunuza yorumlar ekleyin, fakat açıklayıcı method ve değişken isimlerini yorum satırları yerine tercih edin](#comment-your-code-but-prefer-descriptive-method-and-variable-names-over-comments)
 
